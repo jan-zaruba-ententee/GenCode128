@@ -1,6 +1,6 @@
 namespace GenCode128
 {
-    using System.Collections;
+    using System.Collections.Generic;
     using System.Text;
 
     /// <summary>
@@ -44,7 +44,7 @@ namespace GenCode128
 
             // set up the beginning of the barcode
             // assume no codeset changes, account for start, checksum, and stop
-            var codes = new ArrayList(asciiBytes.Length + 3) { Code128Code.StartCodeForCodeSet(currentCodeSet) };
+            var codes = new List<int>(asciiBytes.Length + 3) { Code128Code.StartCodeForCodeSet(currentCodeSet) };
             
             // add the codes for each character in the string
             for (var i = 0; i < asciiBytes.Length; i++)
@@ -56,17 +56,17 @@ namespace GenCode128
             }
 
             // calculate the check digit
-            var checksum = (int)codes[0];
+            var checksum = codes[0];
             for (var i = 1; i < codes.Count; i++)
             {
-                checksum += i * (int)codes[i];
+                checksum += i * codes[i];
             }
 
             codes.Add(checksum % 103);
 
             codes.Add(Code128Code.StopCode());
 
-            var result = codes.ToArray(typeof(int)) as int[];
+            var result = codes.ToArray();
             return result;
         }
 

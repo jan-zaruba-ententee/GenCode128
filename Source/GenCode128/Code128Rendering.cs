@@ -1,7 +1,9 @@
 namespace GenCode128
 {
     using System;
-    using System.Drawing;
+    using ImageSharp;
+    using ImageSharp.PixelFormats;
+    using RectangleF = SixLabors.Primitives.RectangleF;
 
     /// <summary>
     /// Summary description for Code128Rendering.
@@ -133,7 +135,7 @@ namespace GenCode128
         /// <param name="barWeight">Base thickness for bar width (1 or 2 works well)</param>
         /// <param name="addQuietZone">Add required horizontal margins (use if output is tight)</param>
         /// <returns>An Image of the Code128 barcode representing the message</returns>
-        public static Image MakeBarcodeImage(string inputData, int barWeight, bool addQuietZone)
+        public static Image<Rgba32> MakeBarcodeImage(string inputData, int barWeight, bool addQuietZone)
         {
             // get the Code128 codes to represent the message
             var content = new Code128Content(inputData);
@@ -148,19 +150,18 @@ namespace GenCode128
             }
 
             // get surface to draw on
-            Image myImage = new Bitmap(width, height);
-            using (var gr = Graphics.FromImage(myImage))
+            Image<Rgba32> myImage = new Image<Rgba32>(width, height);
+            //using (var gr = Graphics.FromImage(myImage))
             {
+                var gr = myImage;
                 // set to white so we don't have to fill the spaces with white
-                gr.FillRectangle(Brushes.White, 0, 0, width, height);
+                gr.Fill(Rgba32.White, new RectangleF(0, 0, width, height));
 
                 // skip quiet zone
                 var cursor = addQuietZone ? CQuietWidth * barWeight : 0;
 
-                for (var codeIdx = 0; codeIdx < codes.Length; codeIdx++)
+                foreach (var code in codes)
                 {
-                    var code = codes[codeIdx];
-
                     // take the bars two at a time: a black and a white
                     for (var bar = 0; bar < 8; bar += 2)
                     {
@@ -170,7 +171,7 @@ namespace GenCode128
                         // if width is zero, don't try to draw it
                         if (barWidth > 0)
                         {
-                            gr.FillRectangle(Brushes.Black, cursor, 0, barWidth, height);
+                            gr.Fill(Rgba32.Black, new RectangleF(cursor, 0, barWidth, height));
                         }
 
                         // note that we never need to draw the space, since we 

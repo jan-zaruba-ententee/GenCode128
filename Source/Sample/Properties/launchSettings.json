@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Sample": {
+      "commandName": "Project",
+      "commandLineArgs": "GenCode128.png \"Code Project Rules\" 2"
+    }
+  }
+}

@@ -1,14 +1,20 @@
-# GenCode128 - A Code128 Barcode Generator
+# GenCode128Core - A .NET Standard Code128 Barcode Generator
 
 http://www.codeproject.com/Articles/14409/GenCode-A-Code-Barcode-Generator
 
-https://www.nuget.org/packages/GenCode128/
+https://www.nuget.org/packages/GenCode128Code/
 
-![GenCode128 - A Code128 Barcode Generator](Images/GenCode128.png)
+![GenCode128Core - A .NET Standard Code128 Barcode Generator](Images/GenCode128.png)
 
 ## Introduction
 
-This is a simple library that lets you do one thing very easily: generate an Image for a Code128 barcode, with a single line of code. This image is suitable for print or display in a WinForms application, or even in ASP.NET.
+This is a simple library that lets you do one thing very easily: generate an image for a Code128 barcode, with a single line of code. This image is suitable for export to a file or other consumption by a .NET Standard (e.g. .NET Core) application.
+
+## Information about this .NET Standard port
+
+This is a port of the [GenCode128 .NET library](https://github.com/SourceCodeBackup/GenCode128) to .NET Standard. As .NET Standard (nor .NET Core) does not support System.Drawing, which is needed by the rendering part of the library, it uses the [ImageSharp library](http://imagesharp.net/). Note that currently, ImageSharp is in alpha stage and is _not available_ on NuGet. You need to use the [MyGet](https://www.myget.org/gallery/imagesharp) repository of the project if you want to use this library.
+
+The library has been originally developed by Chris Wuestefeld on CodeProject. Now, back to the original library description...
 
 ## Background
 
