@@ -3,14 +3,18 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <PackageId>GenCode128Sample</PackageId>
-    <Product />
+    <Product>GenCode128Sample</Product>
     <Description>Code128 barcode generator</Description>
     <Copyright>2006 Chris Wuestefeld, 2017 Petr Kadlec</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/mormegil-cz/GenCode128</RepositoryUrl>
-    <PackageReleaseNotes>Ported to .NET Core by Petr Kadlec</PackageReleaseNotes>
+    <PackageReleaseNotes>Original version from Chris Wuestefeld was targeting .NET 2.0.
+Code improvements added by Nikolay.IT.
+Ported to .NET Standard by Petr Kadlec</PackageReleaseNotes>
     <Authors>Chris Wuestefeld, Petr Kadlec</Authors>
     <Company></Company>
+    <PackageTags>Barcode, GenCode128, GenCode128Core, Code128, generate barcode</PackageTags>
+    <PackageProjectUrl>https://github.com/mormegil-cz/GenCode128</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ImageSharp" Version="1.0.0-alpha9-00182" />
