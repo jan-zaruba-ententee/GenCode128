@@ -2,7 +2,7 @@
 
 http://www.codeproject.com/Articles/14409/GenCode-A-Code-Barcode-Generator
 
-https://www.nuget.org/packages/GenCode128Code/
+https://www.nuget.org/packages/GenCode128Core/
 
 ![GenCode128Core - A .NET Standard Code128 Barcode Generator](Images/GenCode128.png)
 
