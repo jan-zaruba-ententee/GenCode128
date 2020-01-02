@@ -8,16 +8,18 @@
     <PackageReleaseNotes>Original version from Chris Wuestefeld was targeting .NET 2.0.
 Code improvements added by Nikolay.IT.
 Ported to .NET Standard by Petr Kadlec</PackageReleaseNotes>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/mormegil-cz/GenCode128</RepositoryUrl>
     <PackageId>GenCode128Core</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Product>GenCode128Core</Product>
     <PackageTags>Barcode, GenCode128, GenCode128Core, Code128, generate barcode</PackageTags>
     <PackageProjectUrl>https://github.com/mormegil-cz/GenCode128</PackageProjectUrl>
+    <LangVersion>default</LangVersion>
+    <PackageVersion>2.0.0-beta0007</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ImageSharp" Version="1.0.0-alpha9-00182" />
-    <PackageReference Include="ImageSharp.Drawing" Version="1.0.0-alpha9-00177" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0007" />
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0007" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using GenCode128;
-using ImageSharp;
+using SixLabors.ImageSharp.Formats.Png;
 
 namespace Sample
 {
@@ -23,7 +23,7 @@ namespace Sample
                 var myImage = Code128Rendering.MakeBarcodeImage(data, weight, true);
                 using (var outputStream = new FileStream(filename, FileMode.Create, FileAccess.Write, FileShare.Read))
                 {
-                    myImage.Save(outputStream, ImageFormats.Png);
+                    myImage.Save(outputStream, new PngEncoder());
                 }
             }
             catch (Exception ex)

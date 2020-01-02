@@ -17,8 +17,7 @@ Ported to .NET Standard by Petr Kadlec</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/mormegil-cz/GenCode128</PackageProjectUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ImageSharp" Version="1.0.0-alpha9-00182" />
-    <PackageReference Include="ImageSharp.Drawing" Version="1.0.0-alpha9-00177" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0007" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GenCode128\GenCode128.csproj" />
