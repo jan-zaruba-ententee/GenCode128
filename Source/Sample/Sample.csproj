@@ -7,7 +7,7 @@
         <Description>Code128 barcode generator</Description>
         <Copyright>2006 Chris Wuestefeld, 2017 Petr Kadlec</Copyright>
         <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
-        <RepositoryUrl>https://github.com/mormegil-cz/GenCode128</RepositoryUrl>
+        <RepositoryUrl>https://github.com/jan-zaruba-ententee/GenCode128/</RepositoryUrl>
         <PackageReleaseNotes>
             Original version from Chris Wuestefeld was targeting .NET 2.0. https://www.codeproject.com/Articles/14409/GenCode128-A-Code128-Barcode-Generator
             Code improvements added by Nikolay.IT. https://github.com/SourceCodeBackup/GenCode128
@@ -17,7 +17,7 @@
         <Authors>Chris Wuestefeld, Petr Kadlec, Jan Záruba</Authors>
         <Company></Company>
         <PackageTags>Barcode, GenCode128, GenCode128Core, Code128, generate barcode</PackageTags>
-        <PackageProjectUrl>https://github.com/mormegil-cz/GenCode128</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/jan-zaruba-ententee/GenCode128/</PackageProjectUrl>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="SixLabors.ImageSharp" Version="1.0.4" />

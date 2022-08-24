@@ -10,6 +10,17 @@ https://www.nuget.org/packages/GenCode128Core/
 
 This is a simple library that lets you do one thing very easily: generate an image for a Code128 barcode, with a single line of code. This image is suitable for export to a file or other consumption by a .NET Standard (e.g. .NET Core) application.
 
+## Information about this .NET Standard 2.0 port
+
+[The port to .NET Standard / ImageSharp port by Petr Kadlec](https://github.com/mormegil-cz/GenCode128)
+has been further updated to more recent incarnation of .NET Standard (.NET Standard 2) to be compatible with .NET (Core) 6
+and SixLabors.ImageSharp (which allows side-by-side deployment with popular libraries like [PdfSharp](http://www.pdfsharp.net/))
+and [a pull request](https://github.com/mormegil-cz/GenCode128/pull/1) has been open there.
+For a temporary period of time, until [the pull request](https://github.com/mormegil-cz/GenCode128/pull/1) is approved and a new (beta) version of [GenCode128Core](https://www.nuget.org/packages/GenCode128Core) is published
+a temporary NuGet package GenCode128.Net6 will be maintained here.
+
+Information about the original .NET Port Standard  follows ...
+
 ## Information about this .NET Standard port
 
 This is a port of the [GenCode128 .NET library](https://github.com/SourceCodeBackup/GenCode128) to .NET Standard. As .NET Standard (nor .NET Core) does not support System.Drawing, which is needed by the rendering part of the library, it uses the [ImageSharp library](http://imagesharp.net/). Note that currently, ImageSharp is in beta stage, so this package is marked as beta as well.

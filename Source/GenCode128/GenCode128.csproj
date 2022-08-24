@@ -12,12 +12,12 @@
             Update to .NET 6 by Jan Záruba https://github.com/jan-zaruba-ententee/GenCode128/
         </PackageReleaseNotes>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/mormegil-cz/GenCode128</RepositoryUrl>
-        <PackageId>GenCode128Core</PackageId>
+        <RepositoryUrl>https://github.com/jan-zaruba-ententee/GenCode128/</RepositoryUrl>
+        <PackageId>GenCode128.Net6</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Product>GenCode128Core</Product>
         <PackageTags>Barcode, GenCode128, GenCode128Core, Code128, generate barcode</PackageTags>
-        <PackageProjectUrl>https://github.com/mormegil-cz/GenCode128</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/jan-zaruba-ententee/GenCode128/</PackageProjectUrl>
         <LangVersion>default</LangVersion>
         <PackageVersion>2.0.0-beta0008</PackageVersion>
     </PropertyGroup>
